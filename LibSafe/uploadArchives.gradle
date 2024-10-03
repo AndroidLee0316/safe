@@ -9,15 +9,13 @@ afterEvaluate {
                 groupId = 'com.pasc.lib'
                 artifactId = 'safe'
                 version = '1.0.0'
-
             }
         }
     }
 }
-// 增加上传源码的task
-task sourceJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    archiveClassifier = "sources"
+task sourceJar (type:Jar) {
+    classifier = 'sources'
+    from 'src/main/java'
 }
 
 artifacts {

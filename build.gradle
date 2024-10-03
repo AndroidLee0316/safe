@@ -3,11 +3,13 @@ apply from: 'module_config.gradle'
 buildscript {
 
     repositories {
-
-        google()
-        mavenCentral()
-        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/central/'}
-        jcenter(){url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven{ url 'https://maven.aliyun.com/repository/google' }
+        maven{ url 'https://maven.aliyun.com/repository/jcenter' }
+        maven{url 'http://maven.aliyun.com/nexus/content/groups/public'}
+//        google()
+//        mavenCentral()
+//        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/central/'}
+//        jcenter(){url 'http://maven.aliyun.com/nexus/content/groups/public/'}
         //google 国内代理
         maven {
             url 'https://maven.aliyun.com/repository/google'
@@ -23,9 +25,13 @@ buildscript {
 
 allprojects {
     repositories {
-        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/central/'}
-        jcenter(){url 'http://maven.aliyun.com/nexus/content/groups/public/'}
-        google()
+        maven{ url 'https://maven.aliyun.com/repository/google' }
+        maven{ url 'https://maven.aliyun.com/repository/jcenter' }
+        maven{url 'http://maven.aliyun.com/nexus/content/groups/public'}
+
+//        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/central/'}
+//        jcenter(){url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+//        google()
         mavenCentral()
         maven { url "https://www.jitpack.io" }
 
