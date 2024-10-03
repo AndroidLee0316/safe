@@ -1,5 +1,8 @@
 apply plugin: 'com.android.library'
-apply from:'uploadArchives.gradle'
+apply plugin: 'maven-publish'
+apply plugin: 'com.github.dcendents.android-maven'//this
+
+
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -26,4 +29,26 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+}
+group='com.github.AndroidLee0316'//this
+version = "keyboard_1.0.0"//this
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.pasc.lib.keyboard'
+                artifactId = 'keyboard'
+                version = '1.0.0'
+                // 增加上传源码的 task
+                artifact sourceJar
+                // 必须有这个 否则不会上传AAR包  将bundleReleaseAar任务的单个输出文件作为发布的AAR文件。这样，该AAR文件就会成为 MavenPublication 的 artifact 并进行发布
+                afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+            }
+        }
+    }
+}
+
+task sourceJar (type:Jar) {
+    classifier = 'sources'
+    from 'src/main/java'
 }
