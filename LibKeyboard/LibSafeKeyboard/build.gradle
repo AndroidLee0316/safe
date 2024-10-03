@@ -52,7 +52,6 @@ dependencies {
 
 group='com.github.AndroidLee0316'//this
 version = "safekeyboard_1.0.0"//this
-afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
@@ -66,7 +65,6 @@ afterEvaluate {
             }
         }
     }
-}
 
 task sourceJar (type:Jar) {
     classifier = 'sources'
