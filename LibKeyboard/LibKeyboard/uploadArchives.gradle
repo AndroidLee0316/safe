@@ -9,6 +9,7 @@ afterEvaluate {
                 groupId = 'com.pasc.lib'
                 artifactId = 'keyboard'
                 version = '1.0.0'
+
             }
         }
     }

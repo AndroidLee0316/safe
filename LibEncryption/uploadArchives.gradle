@@ -9,6 +9,7 @@ afterEvaluate {
                 groupId = 'com.pasc.lib'
                 artifactId = 'encryption'
                 version = '1.0.0'
+
             }
         }
     }
