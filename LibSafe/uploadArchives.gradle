@@ -13,3 +13,11 @@ afterEvaluate {
         }
     }
 }
+task sourceJar (type:Jar) {
+    classifier = 'sources'
+    from 'src/main/java'
+}
+
+artifacts {
+    archives sourceJar
+}

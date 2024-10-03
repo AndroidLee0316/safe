@@ -1,6 +1,4 @@
 apply plugin: 'maven-publish'
-//apply from: 'uploadArchives_release.gradle'
-//根据properties中设置的参数来选择不同的上传脚本
 apply plugin: 'com.github.dcendents.android-maven'//this
 group='com.github.AndroidLee0316'//this
 version = "keyboard_1.0.0"//this
@@ -16,3 +14,11 @@ afterEvaluate {
     }
 }
 
+task sourceJar (type:Jar) {
+    classifier = 'sources'
+    from 'src/main/java'
+}
+
+artifacts {
+    archives sourceJar
+}
