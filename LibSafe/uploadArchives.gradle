@@ -1,0 +1,15 @@
+apply plugin: 'maven-publish'
+apply plugin: 'com.github.dcendents.android-maven'//this
+group='com.github.AndroidLee0316'//this
+version = "safe_1.0.0"//this
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.pasc.lib'
+                artifactId = 'safe'
+                version = '1.0.0'
+            }
+        }
+    }
+}

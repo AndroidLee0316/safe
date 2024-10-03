@@ -1,0 +1,5 @@
+<resources>
+  <string name="tip_sign_check_failed">签名验证失败，请重新下载安装</string>
+  <string name="tip_device_rooted">当前设备已root，请注意安全风险</string>
+  <string name="tip_device_hooked">检测到已安装危险应用Xposed，请卸载后再试</string>
+</resources>

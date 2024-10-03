@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/test_keyboard_popwindow_demo_ket"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="普通输入框"/>
+
+    <Button
+        android:id="@+id/test_keyboard_popwindow_demo_btn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="获取输入值"/>
+
+</LinearLayout>

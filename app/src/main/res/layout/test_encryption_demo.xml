@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/test_encryption_demo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结果："/>
+
+    <TextView
+        android:id="@+id/test_encryption_demo_result"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/test_encryption_demo_char_encrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Base64 \n字符加密"/>
+        <Button
+            android:id="@+id/test_encryption_demo_char_decrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Base64 \n字符解密"/>
+        <Button
+            android:id="@+id/test_encryption_demo_file_encrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Base64 \n文件加密"/>
+        <Button
+            android:id="@+id/test_encryption_demo_file_decrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Base64 \n文件解密"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/test_encryption_demo_char_md5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MD5 \n字符加密"/>
+        <Button
+            android:id="@+id/test_encryption_demo_char_md5_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MD5 \n字符加密（加盐）"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/test_encryption_demo_char_md5_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MD5 \n字符加密(多次)"/>
+        <Button
+            android:id="@+id/test_encryption_demo_file_md5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MD5 \n文件加密"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/test_encryption_demo_char_sha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHA \n字符加密"/>
+        <Button
+            android:id="@+id/test_encryption_demo_char_aes_decrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AES \n字符加密"/>
+        <Button
+            android:id="@+id/test_encryption_demo_char_aes_encrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AES \n字符解密"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/test_encryption_demo_char_des_decrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DES \n字符加密"/>
+        <Button
+            android:id="@+id/test_encryption_demo_char_des_encrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DES \n字符解密"/>
+        <Button
+            android:id="@+id/test_encryption_demo_char_rsa_encrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RSA \n字符加密"/>
+        <Button
+            android:id="@+id/test_encryption_demo_char_rsa_decrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RSA \n字符解密"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pasc_keyboard_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/pasc_keyborad_bg">
+
+    <include layout="@layout/pasc_keyboard_toolbar"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/pasc_keyword_title_rv"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/pasc_keyborad_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/pasc_keyword_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="安全键盘"
+            android:textSize="13sp"
+            android:textColor="@color/black_66"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/pasc_keyword_hide_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="18dp"
+            android:paddingLeft="18dp"
+            android:src="@drawable/pasc_keyboard_down_arrow" />
+
+    </RelativeLayout>
+    <!--分割线即-->
+    <View
+        android:id="@+id/pasc_keyboard_split"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pasc_keyboard_num_item_spacing"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <com.pasc.lib.keyboard.KeyboardSpecialView
+            android:id="@+id/pasc_keyboard_kb_special_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <com.pasc.lib.keyboard.KeyboardNormalView
+            android:id="@+id/pasc_keyboard_kb_normal_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <com.pasc.lib.keyboard.KeyboardNumView
+            android:id="@+id/pasc_keyboard_kb_num_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+
+
+</LinearLayout>

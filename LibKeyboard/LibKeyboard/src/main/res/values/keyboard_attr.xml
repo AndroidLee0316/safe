@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="keyboardTheme" format="enum">
+        <enum name="theme_white" value="0" />
+        <enum name="theme_black" value="1" />
+    </attr>
+    <attr name="keyboardType" format="enum">
+        <enum name="normal" value="10" />
+        <enum name="normal_upper" value="11" />
+        <enum name="special" value="12" />
+        <enum name="number" value="21" />
+        <enum name="number_money" value="22" />
+        <enum name="number_idCard" value="23" />
+        <enum name="number_char" value="24" />
+    </attr>
+
+    <attr name="keyboardBG" format="reference"></attr>
+    <attr name="kb_password" format="boolean"></attr>
+
+    <attr name="kb_toolbarHeight" format="dimension"></attr>
+    <attr name="kb_toolbarBG" format="reference"></attr>
+    <attr name="kb_toolbarPaddingLeftRight" format="dimension"></attr>
+    <attr name="kb_splitColor" format="color"></attr>
+
+    <attr name="kb_titleIcon" format="reference"></attr>
+    <attr name="kb_titleText" format="string"></attr>
+    <attr name="kb_titleColor" format="color"></attr>
+    <attr name="kb_titleSize" format="dimension"></attr>
+    <attr name="kb_titleToLeft" format="boolean"></attr>
+
+    <attr name="kb_rightIcon" format="reference"></attr>
+    <attr name="kb_rightText" format="string"></attr>
+    <attr name="kb_rightColor" format="color"></attr>
+    <attr name="kb_rightSize" format="dimension"></attr>
+
+    <attr name="keyNumberItemBG" format="reference"></attr>
+    <attr name="keyNumberDeleteIcon" format="reference"></attr>
+    <attr name="keyNumberRandom" format="boolean"></attr>
+
+    <attr name="keyNormalItemBG" format="reference"></attr>
+    <attr name="keyNormalSpecialBG" format="reference"></attr>
+    <attr name="keyNormalDeleteIcon" format="reference"></attr>
+    <attr name="keyNormalShiftIcon" format="reference"></attr>
+
+    <attr name="kb_itemTextColor" format="color"></attr>
+
+
+    <declare-styleable name="KeyboardTheme">
+        <attr name="keyboardTheme"></attr>
+        <attr name="keyboardType"></attr>
+        <attr name="keyboardBG"></attr>
+        <attr name="kb_password"></attr>
+        <attr name="kb_splitColor"></attr>
+
+        <attr name="kb_toolbarHeight"></attr>
+        <attr name="kb_toolbarBG"></attr>
+        <attr name="kb_toolbarPaddingLeftRight"></attr>
+
+
+        <attr name="kb_titleIcon"></attr>
+        <attr name="kb_titleText"></attr>
+        <attr name="kb_titleColor"></attr>
+        <attr name="kb_titleSize"></attr>
+        <attr name="kb_titleToLeft"></attr>
+
+        <attr name="kb_rightIcon"></attr>
+        <attr name="kb_rightText"></attr>
+        <attr name="kb_rightColor"></attr>
+        <attr name="kb_rightSize"></attr>
+
+        <attr name="keyNumberRandom"></attr>
+        <attr name="keyNumberItemBG"></attr>
+        <attr name="keyNumberDeleteIcon"></attr>
+
+        <attr name="keyNormalItemBG"></attr>
+        <attr name="keyNormalSpecialBG"></attr>
+        <attr name="keyNormalDeleteIcon"></attr>
+        <attr name="keyNormalShiftIcon"></attr>
+
+        <attr name="kb_itemTextColor"></attr>
+
+
+
+    </declare-styleable>
+</resources>

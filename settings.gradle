@@ -1,0 +1,4 @@
+include ':app', ':LibEncryption',
+        ':LibKeyboard:LibKeyboard',
+        ':LibKeyboard:LibSafeKeyboard',
+        ':LibSafe'

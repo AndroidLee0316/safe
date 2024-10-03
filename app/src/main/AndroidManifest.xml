@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pasc.safekeyboard">
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/myAppTheme"
+        android:roundIcon="@mipmap/ic_launcher_round" >
+
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".KeyBoardNormalTestActivity"/>
+        <activity android:name=".KeyBoardViewTestActivity"/>
+        <activity android:name=".KeyBoardPopWindowTestActivity"/>
+        <activity android:name=".KeyBoardEditTestActivity"/>
+        <activity android:name=".SafeKeyBoardPopWindowTestActivity"/>
+        <activity android:name=".EncryptionTestActivity"/>
+        <activity android:name=".SafeTestActivity"/>
+        <activity android:name=".TestPwdActivity"/>
+
+    </application>
+
+</manifest>

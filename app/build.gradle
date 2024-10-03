@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        applicationId "cn.swiftpass.wftpay11"
+        multiDexEnabled true
+
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+//        ndk {
+//            abiFilters "arm64-v8a"
+//        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api "com.android.support:appcompat-v7:${supportLibraryVersion}"
+    api 'com.android.support:multidex:1.0.3'
+//    if (isMavenBuild == 'false') {
+        api project(':LibKeyboard:LibSafeKeyboard')
+        api project(':LibSafe')
+//    } else {
+//        api "com.pasc.lib:safekeyboard:${SAFEKEYBOARD_VERSION}"
+//        api "com.pasc.lib:safe:${SAFE_VERSION}"
+//    }
+}

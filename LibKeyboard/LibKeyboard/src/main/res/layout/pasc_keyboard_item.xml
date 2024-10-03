@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/pasc_keyboard_item_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pasc_keyboard_num_item_height"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pasc_keyboard_item_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/pasc_selector_keyboard_btn_num"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/black_55"
+            android:typeface="sans"
+            android:textSize="@dimen/pasc_keyboard_key_normal_size" />
+
+        <ImageView
+            android:id="@+id/pasc_keyboard_item_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/pasc_selector_key_del"/>
+
+    </RelativeLayout>
+</FrameLayout>

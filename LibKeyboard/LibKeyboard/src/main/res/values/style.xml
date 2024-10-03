@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="pay_pwd_pop_ainm" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pasc_keyborad_push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/pasc_keyborad_push_bottom_out</item>
+    </style>
+</resources>

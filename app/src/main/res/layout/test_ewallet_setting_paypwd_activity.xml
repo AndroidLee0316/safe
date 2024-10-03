@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linear_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvPayType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:text="设置支付密码"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="用户支付时的安全校验"
+            android:textSize="16sp" />
+
+        <com.pasc.widget.extra.PassWordView
+            android:id="@+id/pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+    <com.pasc.lib.keyboard.PwdKeyboardView
+        android:id="@+id/keyboardView22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pasc_keyboard_toolbar_height">46dp</dimen>
+    <dimen name="pasc_keyboard_toolbar_padding_left_right">10dp</dimen>
+    <dimen name="pasc_keyboard_toolbar_item_margin">4dp</dimen>
+    <dimen name="pasc_keyboard_toolbar_text_size">15sp</dimen>
+
+    <dimen name="pasc_keyboard_key_normal_size">22sp</dimen>
+    <dimen name="pasc_keyboard_key_special_size">17sp</dimen>
+
+    <dimen name="pasc_keyboard_num_item_height">54dp</dimen>
+    <dimen name="pasc_keyboard_num_item_spacing">1dp</dimen>
+
+    <dimen name="pasc_keyboard_normal_item_height">48dp</dimen>
+    <dimen name="pasc_keyboard_normal_item_spacing">5dp</dimen>
+
+    <color name="black">#000000</color>
+    <color name="black_4f">#4f4f4f</color>
+    <color name="black_55">#555555</color>
+    <color name="black_66">#666666</color>
+    <color name="white">#FFFFFF</color>
+</resources>

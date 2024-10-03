@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+apply from: 'uploadArchives.gradle'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        // todo 注意 打so库，用debug （assembleDebug）模式打包,release 针对于64位手机比较严格
+        //todo 必须so 和 架构 严格匹配
+//        externalNativeBuild {
+//            cmake {
+//                abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+////                cppFlags "-std=c++11 -Wall -O3 -frtti -fexceptions -DLOG_FLAG -Wno-error=format-security -fsigned-char -fvisibility=hidden -fvisibility-inlines-hidden -Wno-invalid-source-encoding"
+//                cppFlags "-std=c++11 -Wall -O3 -frtti -fexceptions -Wno-error=format-security -fsigned-char -fvisibility=hidden -fvisibility-inlines-hidden -Wno-invalid-source-encoding"
+////                cFlags "-DFFCMD -DANDROID_ABI=armeabi-v7a"
+//                arguments "-DANDROID_TOOLCHAIN=clang", "-DANDROID_STL=stlport_static"
+//            }
+//        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+//    externalNativeBuild {
+//        cmake {
+//            path "CMakeLists.txt"
+//        }
+//    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    if (isMavenBuild == 'false') {
+        api project(':LibKeyboard:LibKeyboard')
+//    } else {
+//        api "com.pasc.lib:keyboard:${KEYBOARD_VERSION}"
+//    }
+}
