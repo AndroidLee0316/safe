@@ -52,11 +52,12 @@ dependencies {
 }
 
 group='com.github.AndroidLee0316'//this
-version = "safe_1.0.0"//this
+version = "1.0.0"//this
+afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                groupId = 'com.pasc.lib.safe'
+                groupId = 'com.pasc.lib'
                 artifactId = 'safe'
                 version = '1.0.0'
                 // 增加上传源码的 task
@@ -66,6 +67,7 @@ version = "safe_1.0.0"//this
             }
         }
     }
+}
 task sourceJar (type:Jar) {
     classifier = 'sources'
     from 'src/main/java'

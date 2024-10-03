@@ -41,11 +41,12 @@ dependencies {
 }
 
 group='com.github.AndroidLee0316'//this
-version = "encryption_1.0.0"//this
+version = "1.0.0"//this
+afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                groupId = 'com.pasc.lib.encryption'
+                groupId = 'com.pasc.lib.'
                 artifactId = 'encryption'
                 version = '1.0.0'
                 // 增加上传源码的 task
@@ -55,6 +56,7 @@ version = "encryption_1.0.0"//this
             }
         }
     }
+}
 
 task sourceJar (type:Jar) {
     classifier = 'sources'
