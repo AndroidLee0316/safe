@@ -18,6 +18,3 @@ task sourceJar (type:Jar) {
     from 'src/main/java'
 }
 
-artifacts {
-    archives sourceJar
-}
