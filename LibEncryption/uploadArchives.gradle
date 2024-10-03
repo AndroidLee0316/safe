@@ -15,10 +15,12 @@ afterEvaluate {
     }
 }
 
-task sourceJar (type:Jar) {
-    classifier = 'sources'
-    from 'src/main/java'
+// 增加上传源码的task
+task sourceJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier = "sources"
 }
+
 
 artifacts {
     archives sourceJar
