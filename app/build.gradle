@@ -1,14 +1,11 @@
 apply plugin: 'com.android.application'
-
 android {
-
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         applicationId "cn.swiftpass.wftpay11"
         multiDexEnabled true
-
         ndk {
             abiFilters "armeabi-v7a", "x86"
 
@@ -22,19 +19,22 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-
 }
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     api "com.android.support:appcompat-v7:${supportLibraryVersion}"
     api 'com.android.support:multidex:1.0.3'
-//    if (isMavenBuild == 'false') {
+    //uploadArchives 打包要有先后顺序，具体顺序看各模块build.gradle 引用顺序来
+    if (isMavenBuild == 'false') {
+        api project(':LibKeyboard:LibSafeKeyboard')
+        api project(':LibKeyboard:LibSafeKeyboard')
         api project(':LibKeyboard:LibSafeKeyboard')
         api project(':LibSafe')
-//    } else {
-//        api "com.pasc.lib:safekeyboard:${SAFEKEYBOARD_VERSION}"
-//        api "com.pasc.lib:safe:${SAFE_VERSION}"
-//    }
+    } else {
+        implementation "com.zxs.lib:ZxsSafekeyboard:1.0.0"
+        implementation "com.zxs.lib:ZxsSafe:1.0.0"
+        implementation "com.zxs.lib:ZxsKeyboard:1.0.0"
+        implementation "com.zxs.lib:ZxsEncryption:1.0.0"
+    }
 }

@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
-apply plugin: 'com.github.dcendents.android-maven'//this
-
+//apply plugin: 'maven-publish'
+//apply plugin: 'com.github.dcendents.android-maven'//this
+apply from:'uploadArchives.gradle'
 
 
 android {
@@ -34,29 +34,27 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
    implementation "org.bouncycastle:bcprov-jdk16:1.46"
-//        implementation 'org.bouncycastle:bcprov-jdk15on:1.69' // 版本号根据实际情况填写
-//    bcprov-jdk15to18-1.68
     implementation 'com.android.support:support-annotations:27.1.1'
 
 }
 
-group='com.github.AndroidLee0316'//this
-version = "1.0.0"//this
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                groupId = 'com.pasc.lib.'
-                artifactId = 'encryption'
-                version = '1.0.0'
-                // 增加上传源码的 task
-                artifact sourceJar
-                // 必须有这个 否则不会上传AAR包  将bundleReleaseAar任务的单个输出文件作为发布的AAR文件。这样，该AAR文件就会成为 MavenPublication 的 artifact 并进行发布
-                afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
-            }
-        }
-    }
-}
+//group='com.github.AndroidLee0316'//this
+//version = "1.0.0"//this
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                groupId = 'com.pasc.lib.'
+//                artifactId = 'encryption'
+//                version = '1.0.0'
+//                // 增加上传源码的 task
+//                artifact sourceJar
+//                // 必须有这个 否则不会上传AAR包  将bundleReleaseAar任务的单个输出文件作为发布的AAR文件。这样，该AAR文件就会成为 MavenPublication 的 artifact 并进行发布
+//                afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+//            }
+//        }
+//    }
+//}
 
 task sourceJar (type:Jar) {
     classifier = 'sources'

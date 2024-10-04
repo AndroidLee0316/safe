@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
-apply plugin: 'com.github.dcendents.android-maven'//this
+//apply plugin: 'maven-publish'
+//apply plugin: 'com.github.dcendents.android-maven'//this
+apply from:'uploadArchives.gradle'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
@@ -43,30 +44,31 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+
 //    if (isMavenBuild == 'false') {
-        api project(':LibKeyboard:LibKeyboard')
+//        api project(':LibKeyboard:LibKeyboard')
 //    } else {
-//        api "com.pasc.lib:keyboard:${KEYBOARD_VERSION}"
+    implementation "com.zxs.lib:ZxsKeyboard:1.0.0"
 //    }
 }
 
-group='com.github.AndroidLee0316'//this
-version = "1.0.0"//this
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                groupId = 'com.pasc.lib'
-                artifactId = 'safekeyboard'
-                version = '1.0.0'
-                // 增加上传源码的 task
-                artifact sourceJar
-                // 必须有这个 否则不会上传AAR包  将bundleReleaseAar任务的单个输出文件作为发布的AAR文件。这样，该AAR文件就会成为 MavenPublication 的 artifact 并进行发布
-                afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
-            }
-        }
-    }
-}
+//group='com.github.AndroidLee0316'//this
+//version = "1.0.0"//this
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                groupId = 'com.pasc.lib'
+//                artifactId = 'safekeyboard'
+//                version = '1.0.0'
+//                // 增加上传源码的 task
+//                artifact sourceJar
+//                // 必须有这个 否则不会上传AAR包  将bundleReleaseAar任务的单个输出文件作为发布的AAR文件。这样，该AAR文件就会成为 MavenPublication 的 artifact 并进行发布
+//                afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+//            }
+//        }
+//    }
+//}
 
 task sourceJar (type:Jar) {
     classifier = 'sources'
